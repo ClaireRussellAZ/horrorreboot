@@ -1,0 +1,72 @@
+{
+    "passages": [
+      {
+        "text": "[[Open the cage door->Devoured by Lions]]",
+        "links": [
+          {
+            "name": "Open the cage door",
+            "link": "Devoured by Lions",
+            "pid": "2"
+          }
+        ],
+        "name": "start",
+        "pid": "1",
+        "position": {
+          "x": "412",
+          "y": "189"
+        },
+        "tags": [
+          "starttag"
+        ]
+      },
+      {
+        "text": "[[Slit lions belly->fell out]]\n[[Give up->game over]]",
+        "links": [
+          {
+            "name": "Slit lions belly",
+            "link": "fell out",
+            "pid": "3"
+          },
+          {
+            "name": "Give up",
+            "link": "game over",
+            "pid": "4"
+          }
+        ],
+        "name": "Devoured by Lions",
+        "pid": "2",
+        "position": {
+          "x": "412",
+          "y": "339"
+        },
+        "tags": [
+          "lionstomach"
+        ]
+      },
+      {
+        "text": "Double-click this passage to edit it.",
+        "name": "fell out",
+        "pid": "3",
+        "position": {
+          "x": "574",
+          "y": "403"
+        }
+      },
+      {
+        "text": "Double-click this passage to edit it.",
+        "name": "game over",
+        "pid": "4",
+        "position": {
+          "x": "412",
+          "y": "489"
+        }
+      }
+    ],
+    "name": "I died",
+    "startnode": "1",
+    "creator": "Twine",
+    "creator-version": "2.3.8",
+    "ifid": "01D82873-422C-40F0-98CC-B245928AED67",
+
+    "id": "idied"
+}

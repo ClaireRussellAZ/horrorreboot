@@ -1,10 +1,13 @@
 var db = require("../models");
 
+console.log(db)
+
+
 module.exports = function (app) {
   // route used for checking user info during login
-  app.put("/api/user", function(req,res){
+  app.get("/api/stories", function(req,res){
     // search User table for one item where email & password matches req.body
-    
+    res.send("meow");
   })
   // route used to register a new user
   app.post("/api/user", function(req,res){
