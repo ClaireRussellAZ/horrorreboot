@@ -1,11 +1,11 @@
 var express = require("express");
 var app = express();
 var path = require("path");
-var PORT = process.env.PORT || 3000;
-var mongoose = require("mongoose");
+const PORT = process.env.PORT || 3001;
+//var mongoose = require("mongoose");
 
 
-mongoose.connect("mongodb://localhost/horrordb", { useNewUrlParser: true });
+//mongoose.connect("mongodb://127.0.0.1:27017/horrorstoriesdb", { useNewUrlParser: true });
 
 
 // set static root directory

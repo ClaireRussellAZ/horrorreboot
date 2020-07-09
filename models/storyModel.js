@@ -6,27 +6,40 @@ var Schema = mongoose.Schema;
 // Using the Schema constructor, create a new UserSchema object
 // This is similar to a Sequelize model
 var StorySchema = new Schema({
-  // `username` must be of type String
-  // `username` will trim leading and trailing whitespace before it's saved
-  // `username` is a required field and throws a custom error message if not supplied
-  title: {
+
+  id: {
     type: String,
     trim: true,
-    required: "title is Required"
+    required: "name is Required"
   },
-  // `password` must be of type String
-  // `password` will trim leading and trailing whitespace before it's saved
-  // `password` is a required field and throws a custom error message if not supplied
-  // `password` uses a custom validation function to only accept values 6 characters or more
-  intro: {
+
+  name: {
     type: String,
     trim: true,
+    required: "name is Required"
   },
-  // `email` must be of type String
-  // `email` must be unique
-  // `email` must match the regex pattern below and throws a custom error message if it does not
-  // You can read more about RegEx Patterns here https://www.regexbuddy.com/regex.html
-  sections: [
+
+  creator: {
+    type: String,
+    trim: true,
+    required: "name is Required"
+  },
+  
+  "creator-version" : {
+    type: String,
+    trim: true,
+    required: "name is Required"
+  },
+
+  startnode: {
+    type: String,
+    trim: true,
+    required: "name is Required"
+  },
+
+  passages: [{
+    
+  }
     
   ]
 });

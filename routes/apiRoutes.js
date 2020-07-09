@@ -1,9 +1,35 @@
-var db = require("../models");
+//var db = require("../models");
 
-console.log(db)
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://127.0.0.1:27017/horrorstoriesdb";
+
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("horrorstoriesdb");
+  var query = {};
+  dbo.collection("stories").find(query).toArray(function(err, result) {
+    if (err) throw err;
+    console.log(result);
+    db.close();
+  });
+});
+
+//console.log(db)
+// console.log(db.Test)
+// console.log(db.Test.find)
+
+// db.Test.find({},function(err,docs){
+  // console.log (err,docs)//
+// })
 
 
 module.exports = function (app) {
+  app.get("/api/test", function(req,res){
+    // db.Story.find({},function(err,docs){
+    //   console.log (docs)
+    //   res.json({find:true});
+    // })
+  })
   // route used for checking user info during login
   app.get("/api/stories", function(req,res){
     // search User table for one item where email & password matches req.body
