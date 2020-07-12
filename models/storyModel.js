@@ -10,7 +10,7 @@ var StorySchema = new Schema({
   id: {
     type: String,
     trim: true,
-    required: "name is Required"
+    required: false
   },
 
   name: {
@@ -22,19 +22,19 @@ var StorySchema = new Schema({
   creator: {
     type: String,
     trim: true,
-    required: "name is Required"
+    required: false
   },
   
   "creator-version" : {
     type: String,
     trim: true,
-    required: "name is Required"
+    required: false
   },
 
   startnode: {
     type: String,
     trim: true,
-    required: "name is Required"
+    required: false
   },
 
   passages: [{
