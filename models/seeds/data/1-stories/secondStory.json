@@ -1,71 +1,283 @@
 {
-    "passages": [
-      {
-        "text": "[[Open the cage door->Devoured by Lions]]",
-        "links": [
-          {
-            "name": "Open the cage door",
-            "link": "Devoured by Lions",
-            "pid": "2"
-          }
-        ],
-        "name": "start",
-        "pid": "1",
-        "position": {
-          "x": "412",
-          "y": "189"
-        },
-        "tags": [
-          "starttag"
-        ]
-      },
-      {
-        "text": "[[Slit lions belly->fell out]]\n[[Give up->game over]]",
-        "links": [
-          {
-            "name": "Slit lions belly",
-            "link": "fell out",
-            "pid": "3"
-          },
-          {
-            "name": "Give up",
-            "link": "game over",
-            "pid": "4"
-          }
-        ],
-        "name": "Devoured by Lions",
-        "pid": "2",
-        "position": {
-          "x": "412",
-          "y": "339"
-        },
-        "tags": [
-          "lionstomach"
-        ]
-      },
-      {
-        "text": "Double-click this passage to edit it.",
-        "name": "fell out",
-        "pid": "3",
-        "position": {
-          "x": "574",
-          "y": "403"
+  "passages": [
+    {
+      "text": "[[Anyone interested in some pets? I got a few animals I'm looking to rehome.->rehome]]",
+      "links": [
+        {
+          "name": "Anyone interested in some pets? I got a few animals I'm looking to rehome.",
+          "link": "rehome",
+          "pid": "2"
         }
+      ],
+      "name": "Want a pet",
+      "pid": "1",
+      "position": {
+        "x": "412",
+        "y": "189"
       },
-      {
-        "text": "Double-click this passage to edit it.",
-        "name": "game over",
-        "pid": "4",
-        "position": {
-          "x": "412",
-          "y": "489"
+      "tags": [
+        "pet-ad"
+      ]
+    },
+    {
+      "text": "[[I have a dog ->dog]]\n[[a cat ->cat]]\n[[and an aquarim of fish->fish]]",
+      "links": [
+        {
+          "name": "I have a dog ",
+          "link": "dog",
+          "pid": "3"
+        },
+        {
+          "name": "a cat ",
+          "link": "cat",
+          "pid": "4"
+        },
+        {
+          "name": "and an aquarim of fish",
+          "link": "fish",
+          "pid": "5"
         }
-      }
-    ],
-    "name": "I died",
-    "startnode": "1",
-    "creator": "Twine",
-    "creator-version": "2.3.8",
-    "ifid": "01D82873-422C-40F0-98CC-B245928AED67",
-    "id": "3story"
+      ],
+      "name": "rehome",
+      "pid": "2",
+      "position": {
+        "x": "411",
+        "y": "339"
+      },
+      "tags": [
+        "pets-to-give"
+      ]
+    },
+    {
+      "text": "[[You take the dog home and all seems to be fine.->fine]]\n",
+      "links": [
+        {
+          "name": "You take the dog home and all seems to be fine.",
+          "link": "fine",
+          "pid": "6"
+        }
+      ],
+      "name": "dog",
+      "pid": "3",
+      "position": {
+        "x": "262",
+        "y": "489"
+      },
+      "tags": [
+        "doggo"
+      ]
+    },
+    {
+      "text": "[[You recieve the cat and can't stop looking at their pretty eyes. Pure white eyes. So entrancing.->pure white eyes]]",
+      "links": [
+        {
+          "name": "You recieve the cat and can't stop looking at their pretty eyes. Pure white eyes. So entrancing.",
+          "link": "pure white eyes",
+          "pid": "9"
+        }
+      ],
+      "name": "cat",
+      "pid": "4",
+      "position": {
+        "x": "412",
+        "y": "489"
+      },
+      "tags": [
+        "cat"
+      ]
+    },
+    {
+      "text": "[[You bring home some nondescript fish and set up a chair to watch them swim around.->watch]]",
+      "links": [
+        {
+          "name": "You bring home some nondescript fish and set up a chair to watch them swim around.",
+          "link": "watch",
+          "pid": "12"
+        }
+      ],
+      "name": "fish",
+      "pid": "5",
+      "position": {
+        "x": "562",
+        "y": "489"
+      },
+      "tags": [
+        "fish"
+      ]
+    },
+    {
+      "text": "[[the dog starts digging at your door. It wants in-> wants in]]",
+      "links": [
+        {
+          "name": "the dog starts digging at your door. It wants in",
+          "link": " wants in",
+          "pid": "7"
+        }
+      ],
+      "name": "fine",
+      "pid": "6",
+      "position": {
+        "x": "262",
+        "y": "639"
+      },
+      "tags": [
+        "dog-knock"
+      ]
+    },
+    {
+      "text": "[[The dog breaks through the door and violently starts ripping you apart; piece by piece.->piece by piece]]",
+      "links": [
+        {
+          "name": "The dog breaks through the door and violently starts ripping you apart; piece by piece.",
+          "link": "piece by piece",
+          "pid": "8"
+        }
+      ],
+      "name": " wants in",
+      "pid": "7",
+      "position": {
+        "x": "263",
+        "y": "789"
+      },
+      "tags": [
+        "dog-death"
+      ]
+    },
+    {
+      "text": "You were a nice meal.",
+      "name": "piece by piece",
+      "pid": "8",
+      "position": {
+        "x": "263",
+        "y": "939"
+      },
+      "tags": [
+        "meal-time"
+      ]
+    },
+    {
+      "text": "[[you can't stop looking at them. They are just too stunning.->can't stop]]",
+      "links": [
+        {
+          "name": "you can't stop looking at them. They are just too stunning.",
+          "link": "can't stop",
+          "pid": "10"
+        }
+      ],
+      "name": "pure white eyes",
+      "pid": "9",
+      "position": {
+        "x": "412",
+        "y": "639"
+      },
+      "tags": [
+        "white-eyes"
+      ]
+    },
+    {
+      "text": "[[You cannot blink. You don't want to blink. You only want to stare at your cat's beautiful eyes.->cannot blink]]",
+      "links": [
+        {
+          "name": "You cannot blink. You don't want to blink. You only want to stare at your cat's beautiful eyes.",
+          "link": "cannot blink",
+          "pid": "11"
+        }
+      ],
+      "name": "can't stop",
+      "pid": "10",
+      "position": {
+        "x": "412",
+        "y": "789"
+      },
+      "tags": [
+        "can't-blink"
+      ]
+    },
+    {
+      "text": "You were found dead the next morning, wide eyed and staring at a stuffed cat.",
+      "name": "cannot blink",
+      "pid": "11",
+      "position": {
+        "x": "413",
+        "y": "939"
+      },
+      "tags": [
+        "death-cat"
+      ]
+    },
+    {
+      "text": "[[You love watching the fish swim around. It soothes you to see them swim in circles and watch you in return. You enjoy the eye contact with them.->eye contact]]",
+      "links": [
+        {
+          "name": "You love watching the fish swim around. It soothes you to see them swim in circles and watch you in return. You enjoy the eye contact with them.",
+          "link": "eye contact",
+          "pid": "13"
+        }
+      ],
+      "name": "watch",
+      "pid": "12",
+      "position": {
+        "x": "562",
+        "y": "639"
+      },
+      "tags": [
+        "watching-fish"
+      ]
+    },
+    {
+      "text": "[[Oh look at that. Your fish have little faces now. They look like you. How cute.->look like you]]",
+      "links": [
+        {
+          "name": "Oh look at that. Your fish have little faces now. They look like you. How cute.",
+          "link": "look like you",
+          "pid": "14"
+        }
+      ],
+      "name": "eye contact",
+      "pid": "13",
+      "position": {
+        "x": "562",
+        "y": "789"
+      },
+      "tags": [
+        "human-fish-faces"
+      ]
+    },
+    {
+      "text": "[[You wonder what it must be like to be a fish.->be a fish]]",
+      "links": [
+        {
+          "name": "You wonder what it must be like to be a fish.",
+          "link": "be a fish",
+          "pid": "15"
+        }
+      ],
+      "name": "look like you",
+      "pid": "14",
+      "position": {
+        "x": "562",
+        "y": "939"
+      },
+      "tags": [
+        "fish-time"
+      ]
+    },
+    {
+      "text": "Bubble. Bubble bubble.",
+      "name": "be a fish",
+      "pid": "15",
+      "position": {
+        "x": "562",
+        "y": "1089"
+      },
+      "tags": [
+        "you-are-a-fish"
+      ]
+    }
+  ],
+  "name": "choose the right pet for you",
+  "startnode": "1",
+  "creator": "Twine",
+  "creator-version": "2.3.8",
+  "ifid": "EF7FD44D-BF79-4D0F-82C4-92A6108D568C"
 }

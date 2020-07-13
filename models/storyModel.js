@@ -7,16 +7,10 @@ var Schema = mongoose.Schema;
 // This is similar to a Sequelize model
 var StorySchema = new Schema({
 
-  id: {
-    type: String,
-    trim: true,
-    required: false
-  },
-
   name: {
     type: String,
     trim: true,
-    required: "name is Required"
+    required: true
   },
 
   creator: {
@@ -25,7 +19,7 @@ var StorySchema = new Schema({
     required: false
   },
   
-  "creator-version" : {
+  creatorVersion : {
     type: String,
     trim: true,
     required: false

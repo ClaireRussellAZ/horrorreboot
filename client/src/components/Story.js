@@ -1,8 +1,8 @@
-import React,{useEffect, useState} from 'react'
+import React,{useEffect, useState} from 'react';
 
 export default function Story(props) {
     const stories = props.stories;
-    const [displaystate, setDisplaystate] = useState(initialState)
+    const [displaystate, setDisplaystate] = useState(initialState);
     let displaypost;
     useEffect(() => {
         

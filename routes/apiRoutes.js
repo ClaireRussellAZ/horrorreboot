@@ -1,7 +1,11 @@
 var db = require("../models");
+const express = require ('express');
+const router = express.Router();
 
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://127.0.0.1:27017/horrorstoriesdb";
+const Story = require('../models/storyModel');
+
 
 MongoClient.connect(url, function(err, db) {
   if (err) throw err;
@@ -22,8 +26,16 @@ db.Test.find({},function(err,docs){
  console.log (err,docs)
  })
 
+ module.exports = router.get('/api/user', function (req, res, next) {
+  let Story = new Story();
+  Story.creator = 'storystring';
+  Story.creatorVersion = 'cVersion';
+  Story.steartnode = 'sNode';
+  let myStory = Story.save()
+  res.json({hello: 'world'})
+})
 
-module.exports = function (app) {
+ function app (app) {
   app.get("/api/test", function(req,res){
     db.Story.find({},function(err,docs){
       console.log (docs)
@@ -46,9 +58,14 @@ module.exports = function (app) {
     });
   })
   // route used to register a new user
-  app.post("/api/user", function(req,res){
+  app.get("/api/user", function(req,res){
     // create an item in User with values taken from req.body
-
+    let Story = new Story();
+    Story.creator = 'storystring';
+    Story.creatorVersion = 'cVersion';
+    Story.steartnode = 'sNode';
+    let myStory = Story.save()
+    res.json({hello: 'world'})
   })
 
   // route used to get information from a specific user
@@ -57,11 +74,11 @@ module.exports = function (app) {
    
   })
 
-  // route used to update information for a specific user
-  app.put("/api/user/:id", function(req,res){
-    // update a row in User table where id matches req.params.id with new values from req.body
+  // // route used to update information for a specific user
+  // app.put("/api/user/:id", function(req,res){
+  //   // update a row in User table where id matches req.params.id with new values from req.body
     
-  })
+  // })
 
   // route used to get all events made by user
   app.get("/api/user/:id/events", function(req,res){

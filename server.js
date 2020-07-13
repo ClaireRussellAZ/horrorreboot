@@ -3,7 +3,7 @@ var app = express();
 var path = require("path");
 const PORT = process.env.PORT || 3005;
 var mongoose = require("mongoose");
-
+const myroutes = require("./routes/apiRoutes.js");
 
 mongoose.connect("mongodb://127.0.0.1:27017/horrorstoriesdb", { useNewUrlParser: true });
 
@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Routes
-require("./routes/apiRoutes.js")(app);
+app.use('/',myroutes);
 //require("./routes/htmlRoutes.js")(app, path);//
 
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Peachy from '../data/Peachy.json';
 import Story from './Story';
 
@@ -15,11 +15,11 @@ export default class Stories extends Component {
     componentDidMount() {
        console.log(Peachy.passages)
        this.setState({ stories: Peachy.passages  });
-        // const Peachy = fetch('../components')
-        // this.getStories()
-        //   .then(dbStories => this.setState({ stories: dbStories }))
-        //   .catch(err => console.log(err));
-        //   console.log(this.state.stories);
+         const Peachy = fetch('../components')
+         this.getStories()
+          .then(dbStories => this.setState({ stories: dbStories }))
+          .catch(err => console.log(err));
+          console.log(this.state.stories);
       }
       
       getStories= async () => {
