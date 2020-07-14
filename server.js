@@ -1,11 +1,11 @@
 var express = require("express");
 var app = express();
 var path = require("path");
-const PORT = process.env.PORT || 3005;
-var mongoose = require("mongoose");
-const myroutes = require("./routes/apiRoutes.js");
+const PORT = process.env.PORT || 3001;
+//var mongoose = require("mongoose");
 
-mongoose.connect("mongodb://127.0.0.1:27017/horrorstoriesdb", { useNewUrlParser: true });
+
+//mongoose.connect("mongodb://127.0.0.1:27017/horrorstoriesdb", { useNewUrlParser: true });
 
 
 // set static root directory
@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Routes
-app.use('/',myroutes);
+require("./routes/apiRoutes.js")(app);
 //require("./routes/htmlRoutes.js")(app, path);//
 
 

@@ -7,14 +7,15 @@ export default class Stories extends Component {
     constructor(props){
         super(props);
         this.state = {
-            stories: []
+            stories: [],
+            story: undefined
         }
     }
 
 
     componentDidMount() {
-       console.log(Peachy.passages)
-       this.setState({ stories: Peachy.passages  });
+    //    console.log(Peachy.passages)
+    //    this.setState({ stories: Peachy.passages  });
          const Peachy = fetch('../components')
          this.getStories()
           .then(dbStories => this.setState({ stories: dbStories }))
@@ -30,14 +31,19 @@ export default class Stories extends Component {
         return body;
       };
 
+      loadStory =() => {this.setState({ story: this.state.stories[0] })}
+
     render() {
         return (
             <div>
              <h1>I'm in stories</h1> 
              <ul>
-             <Story stories ={this.state.stories} />
+             {/* <Story stories ={this.state.stories.}></Story> */}
+          {  this.state.stories.map((story) => { 
+        return (<li key={story.pid}> <button onClick={this.loadStory}>{story.name} </button></li>)
+    })}
              </ul>
-            
+              {this.state.story && <Story stories ={this.state.story}></Story>}
             </div>
         )
     }
