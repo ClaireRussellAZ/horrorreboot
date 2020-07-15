@@ -3,11 +3,13 @@ import logo from "./logo.svg";
 import "./App.css";
 import Stories from './components/Stories';
 
+
 class App extends Component {
   state = {
     stories:[]
   
   };
+  
   
   // componentDidMount() {
   //   this.getStories()
@@ -23,16 +25,20 @@ class App extends Component {
     
   //   return body;
   // };
+
+
+  
   render() {
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <div  className="container"></div>
           <h2>Welcome to React</h2>
     {/* <p>{JSON.stringify(this.state.stories)}</p> */}
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          An array of chilling tales
         </p>
         <Stories />
       </div>

@@ -31,19 +31,19 @@ export default class Stories extends Component {
         return body;
       };
 
-      loadStory =() => {this.setState({ story: this.state.stories[0] })}
+      loadStory =(event) => {this.setState({ story: this.state.stories.filter(story=>story.name===event.target.name)[0]});console.log(event.target.value)}
 
     render() {
         return (
             <div>
              <h1>I'm in stories</h1> 
              <ul>
-             {/* <Story stories ={this.state.stories.}></Story> */}
+             {/* <Story story ={this.state.stories.}></Story> */}
           {  this.state.stories.map((story) => { 
-        return (<li key={story.pid}> <button onClick={this.loadStory}>{story.name} </button></li>)
+        return (<li key={story.pid}> <button name ={story.name} onClick={this.loadStory}>{story.name} </button></li>)
     })}
              </ul>
-              {this.state.story && <Story stories ={this.state.story}></Story>}
+              {this.state.story && <Story story ={this.state.story}></Story>}
             </div>
         )
     }
