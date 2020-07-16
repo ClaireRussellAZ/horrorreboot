@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Peachy from '../data/Peachy.json';
 import Story from './Story';
 
 export default class Stories extends Component {

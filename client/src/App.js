@@ -34,7 +34,7 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <div  className="container"></div>
-          <h2>Welcome to React</h2>
+          <h2>Tails from the Crypt</h2>
     {/* <p>{JSON.stringify(this.state.stories)}</p> */}
         </div>
         <p className="App-intro">
